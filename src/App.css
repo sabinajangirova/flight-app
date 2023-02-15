@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -34,5 +38,60 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply h-full;
+  }
+
+  #root {
+    @apply h-fit relative;
+  }
+
+  nav {
+    @apply flex justify-between justify-center p-4;
+  }
+
+  footer {
+    @apply m-0 px-14;
+  }
+}
+
+@layer components {
+  .header-logo {
+    @apply flex w-5/12 align-middle;
+  }
+
+  .header-logo img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .header-logo-title {
+    @apply text-xl font-bold text-gray-800 py-1 ml-1;
+  }
+
+  .header-account {
+    @apply flex align-middle;
+  }
+
+  .header-account-left {
+    @apply flex align-middle mx-2;
+  }
+
+  .currency {
+    @apply p-1.5 font-semibold text-gray-500;
+  }
+
+  .banner {
+    @apply p-32 h-fit;
+  }
+
+  .main-home {
+    height: 2000px;
   }
 }
